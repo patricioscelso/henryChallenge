@@ -8,7 +8,7 @@ function App() {
     <div className="App">
      
      <Route exact path = '/' render = {() => < Catalogo /> }/>
-     <Route exact path = '/search' render = {() => < Catalogo /> }/>
+     <Route exact path = '/api/search' render = {() => < Catalogo /> }/>
     
     </div>
 
