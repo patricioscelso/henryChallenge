@@ -1,4 +1,9 @@
-.productsContainer{
+.catalogueContainer{
     display: flex;
     flex-flow: row wrap;
+}
+
+.filter{
+    display: flex;
+    flex-direction: row;
 }

@@ -1,77 +1,18 @@
-// import React from 'react'
-
-// export default function Producto ({item}){
-
-//     console.log(item)
-// return(
-//     <div>
-//         <p>
-//            {item.title} 
-//         </p>
-//         <p>
-//            {item.price} 
-//         </p>
-//         <p>
-//            {item.condition} 
-//         </p>
-//         <p>
-//            {item.available_quantity} 
-//         </p>
-//         <img src={item.thumbnail}></img>
-//     </div>
-// )
-
-
-// }
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import './Producto.css';
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
 
-export default function Producto ({item}) {
-  const classes = useStyles();
+export default function Producto({item}){
+    return (
+<div class="card" className="productCard-container">
+    <img className="product-image" src={item.thumbnail}/>
+    <div class="card-body">
+      <h5 class="card-title">${item.price} {item.currency_id}</h5>
+    <h6 class="card-text">{item.title}</h6>
+      <span>Estado: {item.condition} </span>|<span> Stock: {item.available_quantity}</span>
+      <a href={item.permalink} class="btn btn-warning my-sm-0">Comprar</a>
+  </div>
+</div>
 
-  return (
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={item.thumbnail}
-          title={item.title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="h2">
-            {item.title}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            {item.price}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            {item.condition}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2">
-            {item.available_quantity}
-          </Typography>
-        
-        
-        
-        
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  );
+)
 }
