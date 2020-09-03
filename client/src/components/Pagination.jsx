@@ -3,6 +3,13 @@ import './Pagination.css'
 
 export default function ({totalProductos, prodxpage, paginar}){
 
+    const [currentPage, setCurrentPage] = useState(page || 1);
+    const [prodxpage] = useState(30)
+
+    const indexLastProd = currentPage*prodxpage;
+    const indexFirstProd = indexLastProd-prodxpage;
+    const currentProds = productos.slice(indexFirstProd, indexLastProd);
+
 
     const pagenumbers = [];
     for (var i=1; i <= Math.ceil(totalProductos/prodxpage); i++ ){
@@ -10,6 +17,12 @@ export default function ({totalProductos, prodxpage, paginar}){
         pagenumbers.push(i);
 
     }
+    
+    function paginar(number){
+        setCurrentPage(number);
+    }
+
+
     return(
 
         <div>

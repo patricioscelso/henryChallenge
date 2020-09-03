@@ -3,7 +3,3 @@
     flex-flow: row wrap;
 }
 
-.filter{
-    display: flex;
-    flex-direction: row;
-}
