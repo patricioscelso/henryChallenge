@@ -1,7 +1,9 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import './Pagination.css'
 
-export default function ({totalProductos, prodxpage, paginar}){
+export default function ({totalProductos, paginar, productos,  page}){
 
     const [currentPage, setCurrentPage] = useState(page || 1);
     const [prodxpage] = useState(30)

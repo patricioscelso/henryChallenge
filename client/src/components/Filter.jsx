@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import './Filter.css';
 
-export default function Filter(){
+export default function Filter({productos}){
 
     const [filter, setFilter] = useState('');
 

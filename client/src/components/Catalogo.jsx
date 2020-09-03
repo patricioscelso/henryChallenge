@@ -1,13 +1,13 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import axios from 'axios'
 import Producto from './Producto';
 import Navigation from './Navigation'
 import './Catalogo.css'
-import axios from 'axios'
 import Pagination from './Pagination'
 
-export default function Catalogo({page}){               //props de busqueda(?)
+export default function Catalogo({ currentProds}){               //props de busqueda(?)
     
     const [productos, setProducts] = useState([]);
     const [search, setSearch] = useState('');
