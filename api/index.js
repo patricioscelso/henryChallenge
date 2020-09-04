@@ -28,7 +28,8 @@ server.get('/api/search/:query', function(req, res) {
                                "currency_id": producto.currency_id,
                                "available_quantity": producto.available_quantity,
                                "thumbnail": producto.thumbnail,
-                               "condition": producto.condition
+                               "condition": producto.condition,
+                               "permalink": producto.permalink
                            }
                            array.push(objeto);
           
