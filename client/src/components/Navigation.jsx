@@ -18,9 +18,6 @@ export default function Navigation({search}){
     return(
     <div>
         <nav class="navbar navbar-dark bg-dark">
-            
-           { /*<img src='C:\Users\patri\Desktop\henryChallenge\client\public\henrylogo.png'></img>*/}
-            
             <a class="navbar-brand" href='/'>HenryLibre</a>
             <form class="form-inline" onSubmit={buscar}>
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={change} ></input>
