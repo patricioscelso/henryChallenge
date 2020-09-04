@@ -1,29 +1,19 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import axios from 'axios'
+
 import Producto from './Producto';
 import Navigation from './Navigation'
 import './Catalogo.css'
 import Pagination from './Pagination'
 
-export default function Catalogo({ currentProds}){               //props de busqueda(?)
+export default function Catalogo({currentProds}){               //props de busqueda(?)
     
-    const [productos, setProducts] = useState([]);
-    const [search, setSearch] = useState('');
+    
+    //const [search, setSearch] = useState('');
    
 
-    async function getProducts(){
-        const busq = search.busqueda
-       const products  = await axios.get('http://localhost:3080/api/search/' + busq)
-        setProducts(products.data);
-    }
-
-    useEffect(()=>{
-        
-        getProducts();
-        
-    },[search]) //renderiza cada vez que cambia de catalogo
+     //renderiza cada vez que cambia de catalogo
     
 
     return(

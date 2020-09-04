@@ -6,10 +6,11 @@ export default function Navigation({search}){
    
     const [busqueda, setBusqueda] = useState({});
 
-   function buscar(e){
-    e.preventDefault()
-    search(busqueda)
-   }
+    function buscar(e){
+        e.preventDefault()
+        search(busqueda)
+       }
+   
    function change(e){
     setBusqueda({...busqueda, busqueda: e.target.value})
    }
